@@ -30,8 +30,7 @@
 
 using namespace std;
 
-namespace spaceBandedGlobalAlignment
-{
+namespace spaceBandedGlobalAlignment {
 
 #define I (i - 1)
 #define J (j - 1)
@@ -43,56 +42,56 @@ namespace spaceBandedGlobalAlignment
 #define slCOL(row, col) ((col) - L[(row)])
 #define inf (std::numeric_limits<int>::max())
 
-enum MatchLabel
-{
-	MATCH = 0, MISMATCH = 1, INDEL = 2
+enum MatchLabel {
+  MATCH = 0,
+  MISMATCH = 1,
+  INDEL = 2
 };
 
-class CBandedGlobalAlignment
-{
-public:
-	CBandedGlobalAlignment(const string & filePath1, const string & filePath2,
-			const vector<int> & weigth);
-	~CBandedGlobalAlignment();
-	void runBandedGlobalAlignment();
-private:
-	string filePathU;
-	string filePathV;
-	string U;
-	string V;
-	vector<int> w;
-	string rU;
-	string rV;
-	int alignScore;
-	double lfIdentity;
+class CBandedGlobalAlignment {
+ public:
+  CBandedGlobalAlignment(const string & filePath1, const string & filePath2,
+                         const vector<int> & weigth);
+  ~CBandedGlobalAlignment();
+  void runBandedGlobalAlignment();
+ private:
+  string filePathU;
+  string filePathV;
+  string U;
+  string V;
+  vector<int> w;
+  string rU;
+  string rV;
+  int alignScore;
+  double lfIdentity;
 
-	vector<vector<int> > s;
-	vector<vector<char> > l;
+  vector<vector<int> > s;
+  vector<vector<char> > l;
 
-	vector<int> L;
-	vector<int> R;
+  vector<int> L;
+  vector<int> R;
 
-	int n;
-	int m;
-	int d;
+  int n;
+  int m;
+  int d;
 
-	clock_t TimeStart, TimeEnd;
-	double memory;
+  clock_t TimeStart, TimeEnd;
+  double memory;
 
-	ostringstream ossGlLog;
+  ostringstream ossGlLog;
 
-	void outPutsANDl();
-	void resultDisplay();
-	void setLR(const int & k);
-	void stringReverse(string & str);
-	void outputLog(const string & strOut);
-	void outputfastaFormat(const string & str);
-	bool bandedGlobalAlignAlgorithm(const int & k);
-	int readString(const string & strPath, string & str);
-	MatchLabel charMatch(const char & a, const char & b);
-	void outputResultString(const string & str, const int & start,
-			const int & end);
-	pair<int, char> max(const int & s1, const int & s2, const int & s3);
+  void outPutsANDl();
+  void resultDisplay();
+  void setLR(const int & k);
+  void stringReverse(string & str);
+  void outputLog(const string & strOut);
+  void outputfastaFormat(const string & str);
+  bool bandedGlobalAlignAlgorithm(const int & k);
+  int readString(const string & strPath, string & str);
+  MatchLabel charMatch(const char & a, const char & b);
+  void outputResultString(const string & str, const int & start,
+                          const int & end);
+  pair<int, char> max(const int & s1, const int & s2, const int & s3);
 };
 
 }
