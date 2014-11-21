@@ -1,8 +1,5 @@
-math578b
+MATH 578A sequence alignment assignments
 ========
-
-math578 sequence alignment assignments
-------------------
 
 - global alignment
 
@@ -10,5 +7,5 @@ math578 sequence alignment assignments
 
 - multiple global alignment
 
-If you are looking for affine gap penalty local alignment or affine gap penalty global alignment, please go https://github.com/chenhaifeng9/s3/tree/master/seqalign
+If you are looking for **affine gap penalty local alignment** or **affine gap penalty global alignment**, please go https://github.com/chenhaifeng9/s3/tree/master/seqalign
 
