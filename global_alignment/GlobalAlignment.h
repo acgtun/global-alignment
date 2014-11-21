@@ -86,7 +86,8 @@ class CGlobalAlignment {
   int readString(const string & strPath, string & str);
   MatchLabel charMatch(const char & a, const char & b);
   void outputResultString(const string & str, const int & start,
-                          const int & end, const vector<int> & color);pair<int, char> max(const int & s1, const int & s2, const int & s3);
+                          const int & end, const vector<int> & color);
+  pair<int, char> max(const int & s1, const int & s2, const int & s3);
 };
 
 }
